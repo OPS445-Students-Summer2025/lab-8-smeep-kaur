@@ -1,0 +1,20 @@
+---
+- name: Configure OPS445 Lab VM
+  hosts: ops435b
+  become: yes
+
+  tasks:
+    - name: Create directory structure
+      file:
+        path: "/home/student/ops445/lab{{ item }}"
+        state: directory
+        mode: '0755'
+      loop: "{{ range(1, 9)|list }}"
+
+    - name: Create user account
+      user:
+        name: ops445user
+        state: present
+        groups: wheel
+        shell: /bin/bash
+
