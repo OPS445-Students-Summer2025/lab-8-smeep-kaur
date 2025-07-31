@@ -1,0 +1,22 @@
+
+PLAY [Configure OPS445 Lab VM] *************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [mylab]
+
+TASK [Create directory structure] **********************************************
+ok: [mylab] => (item=1)
+ok: [mylab] => (item=2)
+ok: [mylab] => (item=3)
+ok: [mylab] => (item=4)
+ok: [mylab] => (item=5)
+ok: [mylab] => (item=6)
+ok: [mylab] => (item=7)
+ok: [mylab] => (item=8)
+
+TASK [Create user account] *****************************************************
+changed: [mylab]
+
+PLAY RECAP *********************************************************************
+mylab                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
